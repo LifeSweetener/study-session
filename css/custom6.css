@@ -1,0 +1,399 @@
+/* Вся страница в общем: */
+html {
+	font-size: 18pt;
+	font-family: Helvetica;
+	background: LightYellow;
+}
+
+/*===============================================*/
+/* Стандартные кнопки сайта: */
+button {
+	color: MintCream;  /* Цвет текста кнопки */
+	background: CornflowerBlue;  /* Цвет заднего фона кнопки */
+	border: 3px ridge MintCream;  /* Стиль границы кнопки */
+	height: 50px;  /* Установить определённую высоту кнопки */
+	display: inline-block;  /* Расширять кнопку относительно её названия */
+	text-align: center;  /* Выравнивать текст в кнопке по центру */
+	font-size: inherit;  /* Размер шрифта сделать, как у родительского элемента, в котором эта кнопка содержится */
+	cursor: pointer;  /* При наводе на кнопку сделать курсор "рука" */
+	border-radius: 5px;  /* Округлить края кнопки */
+	
+	/* Анимация перехода из одного состояния в другое (при наведении курсора на кнопку, при нажатии на неё и тп) */
+	-webkit-transition: All 0.2s ease;
+	-moz-transition: All 0.2s ease;
+	-o-transition: All 0.2s ease;
+	-ms-transition: All 0.2s ease;
+	transition: All 0.2s ease;
+}
+
+/* Наведение курсора на кнопку: */
+button:hover {
+	color: Gainsboro;
+	background: RoyalBlue;
+	border: 3px ridge Gainsboro;
+}
+
+/* Нажатие на кнопку: */
+button:active {
+	color: MintCream;
+	background: Silver;
+	border: 3px inset MintCream;
+}
+
+button:disabled {
+	color: Lavender;
+	background: MidnightBlue;
+	border: 3px outset Gainsboro;
+	cursor: default;
+}
+
+/*===============================================*/
+/* Верхнее меню сайта (header): */
+header .headerWhite {
+	font-family: inherit;
+	font-size: 16pt;
+	font-weight: 800;
+}
+
+/* Абзац с самой верхней панелью: */
+div .topbar {
+	padding: 1% 75%;
+	border-bottom: 5px solid Moccasin;
+	background: PaleTurquoise;
+	border-radius: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+/* Абзац с основной частью меню: */
+div .content {
+	padding: 1% 15%;
+	/*border-bottom: 20px solid PeachPuff;*/
+}
+
+/*===============================================*/
+/* Ссылки в меню (header): */
+/* TOPBAR (САМАЯ ВЕРХНЯЯ ЧАСТЬ МЕНЮ): */
+.headerWhite .topbar .link {
+	font-family: Mistral, cursive;
+	font-size: inherit;
+	position: relative;
+	background: linear-gradient(45deg, Gainsboro, White);
+	border: 2px solid Gainsboro;
+	cursor: pointer;
+	-webkit-transition: All 0.3s ease;
+	-moz-transition: All 0.3s ease;
+	-o-transition: All 0.3s ease;
+	-ms-transition: All 0.3s ease;
+	transition: All 0.3s ease;
+}
+
+.headerWhite .topbar .link:hover {
+	color: linear-gradient(45deg, DarkGray, DeepSkyBlue);
+	border: 2px double Silver;
+}
+
+.headerWhite .topbar .link:active {
+	color: linear-gradient(45deg, Gray, CornflowerBlue);
+	border: 2px inset DarkGray;
+	border-radius: 3px;
+}
+
+/*===============================================*/
+/* CONTENT (ОСНОВНАЯ ЧАСТЬ МЕНЮ): */
+.headerWhite .content .link {
+	position: relative;
+	font-family: Mistral, cursive;
+	font-size: 38pt;
+	background: linear-gradient(0deg, Gainsboro, White);
+	color: linear-gradient(45deg, Gainsboro, SkyBlue);
+	border: 2px solid Gainsboro;
+	margin-right: 5%;
+	cursor: pointer;
+	-webkit-transition: All 0.3s ease;
+	-moz-transition: All 0.3s ease;
+	-o-transition: All 0.3s ease;
+	-ms-transition: All 0.3s ease;
+	transition: All 0.3s ease;
+}
+
+.headerWhite .content .link:hover {
+	position: relative;
+	font-family: Mistral, cursive;
+	font-size: 40pt;
+	color: linear-gradient(180deg, Gainsboro, SkyBlue);
+	border: 2px solid Silver;	
+}
+
+.headerWhite .content .link:active {
+	position: relative;
+	font-family: Mistral, cursive;
+	font-size: 32pt;
+	color: White;
+	background: linear-gradient(0deg, DimGray, White);
+	border: 2px inset DarkGray;
+	border-radius: 3px;
+}
+
+/* Логотип в верхнем меню: */
+.logo {
+	margin-right: 5%;
+	cursor: pointer;
+}
+
+/*===============================================*/
+/* Основное тело сайта: */
+main {
+	text-align: center;
+	background-color: Honeydew;
+}
+
+/* Заголовок всех форм сайта, разделов и тп: */
+h2 {
+	font-size: 24pt;
+}
+
+.popupMenu {
+	font-size: 22pt;
+	text-decoration: none;
+	color: Plum;
+	font-weight: 500;
+	height: 5em;
+	
+	 /* Анимация переходов:
+	— скорость всех переходов - 600ms (0.6s);
+	— применять для всех CSS-свойств ссылки нашего сайта (All);
+	— временная функция: у нас это ease, то есть скорость анимации будет плавно изменяться (в середине быстрее, чем в конце).
+	*/
+	-webkit-transition: All 0.6s ease;
+	-moz-transition: All 0.6s ease;   /* Настройки переходов конкретно для браузера Mozilla FireFox */
+	-o-transition: All 0.6s ease;  /* Настройки переходов конкретно для браузера Opera */
+	-ms-transition: All 0.6s ease;  /* Настройки переходов конкретно для браузера Microsoft Edge */
+	transition: All 0.6s ease;  /* Настройки переходов для всех браузеров */
+}
+
+.popupMenu:hover {
+	font-size: 24pt;
+	text-decoration: underline;
+	color: Fuchsia;
+	box-shadow: 4px 2px 5px Thistle;
+	cursor: pointer;
+}
+
+.popupMenu:active {
+	font-size: 18pt;
+	text-decoration: none;
+	color: Fuchsia;
+	font-weight: bold;
+	box-shadow: 5px 3px 6px Orchid;
+	cursor: pointer;
+}
+
+/*===============================================*/
+/* Ссылки сайта: */
+a {
+	color: Crimson;  /* Цвет ссылки */
+	text-decoration: none;  /* Не выделять текст ссылки курсивом и не подчёркивать её */
+  
+  /* Анимация переходов:
+	— скорость всех переходов - 600ms (0.6s);
+	— применять для всех CSS-свойств ссылки нашего сайта (All);
+	— временная функция: у нас это ease, то есть скорость анимации будет плавно изменяться (в середине быстрее, чем в конце).
+  */
+	-webkit-transition: All 0.6s ease;
+	-moz-transition: All 0.6s ease;   /* Настройки переходов конкретно для браузера Mozilla FireFox */
+	-o-transition: All 0.6s ease;  /* Настройки переходов конкретно для браузера Opera */
+	-ms-transition: All 0.6s ease;  /* Настройки переходов конкретно для браузера Microsoft Edge */
+	transition: All 0.6s ease;  /* Настройки переходов для всех браузеров */
+}
+
+/* Наводим на ссылку курсор: */
+a:hover {
+  color: Ivory;
+  background-color: PaleTurquoise;
+  text-decoration: underline;
+  font-size: 18pt;
+}
+
+/* Кликаем по ссылке: */
+a:active {
+  color: DeepPink;
+  text-decoration: underline;
+}
+
+/* Стили для посещённой ссылки: */
+a:visited {
+  color: Orange;
+}
+
+/* Если кликаем по уже посещённой ссылке: */
+a:visited:active {
+	color: DeepPink;
+	text-decoration: underline;
+}
+
+/* Если наводим мышку на посещённую сслыку: */
+a:visited:hover {
+	color: Ivory;
+	background-color: PaleTurquoise;
+	text-decoration: underline;
+}
+
+/*===============================================*/
+/* Формы для ввода данных: */
+div .form {
+	position: relative;  /* Учитывать при расположении формы расположение других элементов сайта */
+	border: 4px double DarkBlue;  /* Стиль границы формы */
+	display: inline-block;  /* Ширину формы устанавливать по ширине её содержимого */
+	height: 520px;  /* Высота определённая */
+	margin-top: 3%;  /* Удалённость от элементов сверху */
+	margin-right: 3%;  /* Удалённость от элементов справа */
+	margin-bottom: 3%;  /* Удалённость от элементов снизу */
+	background: linear-gradient(0deg, Turquoise, White);  /* Задний фон (вертикальный градиент) */
+	
+	/* Настройки переходов форм сайта: */
+	-webkit-transition: All 0.3s ease;
+	-moz-transition: All 0.3s ease;
+	-o-transition: All 0.3s ease;
+	-ms-transition: All 0.3s ease;
+	transition: All 0.3s ease;
+}
+
+/* При наведении курсора мыши на форму изменить следующие свойства: */
+div .form:hover {
+	border: 4px outset LightBlue;
+	box-shadow: -10px -5px 5px skyblue;
+	height: 540px;
+	background: linear-gradient(0deg, PaleTurquoise, White);
+	cursor: pointer;
+}
+
+/* Элементы форм сайта (кнопки выше): */
+input[type=checkbox] {
+	width: 45px;
+	height: 20px;
+	cursor: pointer;
+}
+
+input[type=text], input[type=password], input[type=date] {
+	font-size: inherit;
+	width: 250px;
+	height: 30px;
+}
+
+select {
+	font-size: inherit;
+	width: 250px;
+	height: 30px;
+	cursor: pointer;
+}
+
+/* Комментарии: */
+.comments {
+	border: 5px solid blue;
+	background: skyblue;
+	color: black;
+	font-size: 24pt;
+	font-family: Arial;
+	margin-top: 75px;
+}
+
+h4 {
+	font-size: 30pt;
+	font-weight: bold;
+	color: Navy;
+	box-shadow: 10px 10px 20px blue;
+}
+
+.table {
+	border: 10px inset LawnGreen;
+	box-shadow: 5px 5px 15px OliveDrab;
+	text-align: center;
+	height: 500px;
+	font-size: 20pt;
+	background: LightCyan;
+	width: 45%;
+}
+
+.auto {
+	width: 80%;
+}
+
+caption {
+	font-size: 30pt;
+	color: red;
+}
+
+td {
+	border: 5px outset Chartreuse;
+	color: Teal;
+}
+
+.specialTd {
+	border: none;
+}
+
+th {
+	color: SeaGreen;
+	border-left: 5px outset OliveDrab;
+	border-right: 5px outset OliveDrab;
+}
+
+footer {
+	background: LightYellow;
+}
+
+.collection {
+	font-size: 24pt;
+	line-height: 20px;
+	text-align: right;
+	margin-right: 50px;
+	line-height: 28pt;
+	letter-spacing: 5px;
+	color: DeepSkyBlue;
+}
+
+.collection .content {
+	background: Lavender;
+	box-shadow: 3px 3px 4px blue;
+	word-wrap: break-word;
+}
+
+img {
+	margin-top: 75px;
+	border-top: 15px groove DodgerBlue;
+	padding-top: 40px;
+}
+
+.picture:hover {
+	margin-top: 75px;
+	border-top: 15px groove DodgerBlue;
+	padding-top: 40px;
+	box-shadow: 3px 3px 4px skyblue;
+	cursor: pointer;
+}
+
+.sort {
+	font-weight: bold;
+	font-size: 25pt;
+	color: violet;
+	
+	-webkit-transition: All 0.4s ease;
+	-moz-transition: All 0.4s ease;
+	-o-transition: All 0.4s ease;
+	-ms-transition: All 0.4s ease;
+	transition: All 0.4s ease;
+}
+
+.sort:hover {
+	font-size: 30pt;
+	cursor: pointer;
+	color: MediumOrchid;
+}
+
+.sort:active {
+	font-size: 30pt;
+	text-decoration: underline;
+	cursor: pointer;
+	color: DarkViolet;
+}
